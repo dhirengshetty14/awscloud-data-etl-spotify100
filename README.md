@@ -30,8 +30,6 @@ Spotify API: This is where it all starts. We pull the raw global top 100 track i
 
 ***Amazon Athena (Ad-hoc Queries)***: For quick, on-the-fly analysis, we use Athena. This serverless query service lets analysts run standard SQL queries directly against the data stored in our S3 data lakes (both raw and processed). Athena uses the schemas from the Glue Data Catalog, offering a flexible and cost-effective way to explore data without needing to load it into Redshift first.
 
-***PowerBI/QuickSight***: This is where insights come to life. Business Intelligence tools like Tableau, PowerBI, or AWS QuickSight connect directly to Amazon Redshift (and sometimes Athena). They use the cleaned and structured data to create interactive dashboards, reports, and visualizations that turn complex data into clear, actionable insights about global music trends.
-
 ***AWS CloudWatch (Monitoring & Logging)***: CloudWatch keeps an eye on everything. It collects logs and metrics from all the AWS services in the pipeline, allowing us to monitor their health, track performance, and set up alerts for any issues or anomalies.
 
 ***AWS IAM & VPC (Security & Networking)***: These are the fundamental AWS services that ensure the entire architecture is secure and isolated. IAM manages all permissions and access controls, ensuring only authorized users and services can interact with resources. VPC provides a private, isolated network environment where all our AWS resources run, giving us granular control over network security.
