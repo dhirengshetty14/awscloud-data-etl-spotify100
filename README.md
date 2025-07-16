@@ -79,6 +79,8 @@ Analysts can run ad-hoc SQL queries using Athena directly on S3 or leverage Reds
 ### 6. **Visualization**
 Data is ready for visualization in Tableau, PowerBI, or AWS QuickSight, enabling real-time dashboards and insights into global music trends.
 
+![Spotify Data Pipeline Diagram](https://drive.google.com/uc?export=view&id=1bN5KqMk0gNLLK_hmfpCjpaqFv73q92Jw "Spotify Data Pipeline Diagram")
+
 ---
 
 ## 🌟 **Key Features & Innovations**
