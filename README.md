@@ -8,6 +8,7 @@
 
 ## 🏗️ **Architecture**
 Here's how the data moves through the system:
+![Global Beats Architecture](https://drive.google.com/uc?export=view&id=1v1m7lEvFSWYDfrMfULrWvW3XrC0A7iwU "Global Beats Data Pipeline Architecture")
 
 Spotify API: This is where it all starts. We pull the raw global top 100 track information directly from the Spotify API.
 
