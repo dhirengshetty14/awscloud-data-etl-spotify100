@@ -13,7 +13,7 @@ Spotify API: This is where it all starts. We pull the raw global top 100 track i
 
 ***Apache Airflow Scheduler***: Airflow is the brain of the operation. It's set up to run daily, orchestrating the entire data extraction, transformation, and loading (ETL) process. It reliably triggers the first step of our pipeline: the data extraction.
 
-***AWS Lambda (Data Extractor)***: When triggered by Airflow, this serverless function jumps into action. It's written in Python and uses libraries like spotipy to connect to the Spotify API, fetch the latest top 50 tracks data, and then uses boto3 to directly save the raw JSON files into an S3 bucket. Being serverless means it automatically scales and only costs money when it's running.
+***AWS Lambda (Data Extractor)***: When triggered by Airflow, this serverless function jumps into action. It's written in Python and uses libraries like spotipy to connect to the Spotify API, fetch the latest top 100 tracks data, and then uses boto3 to directly save the raw JSON files into an S3 bucket. Being serverless means it automatically scales and only costs money when it's running.
 
 ***AWS S3 (Raw Data Lake)***: This is our central storage for all the raw, untouched data coming from Spotify. S3 is incredibly reliable, can store virtually unlimited amounts of data, and is very cost-effective. We organize the data with a clear folder structure (like by year, month, and day) to make it easy to find and manage.
 
@@ -61,7 +61,7 @@ Spotify API: This is where it all starts. We pull the raw global top 100 track i
 ## 📦 **How It Works**
 
 ### 1. **Extraction (Airflow + Lambda)**
-Airflow triggers a Lambda function daily, which authenticates with the Spotify API and downloads the latest Top 50 Global tracks, artists, and albums. The raw data is stored in S3 with timestamped folders for versioning.
+Airflow triggers a Lambda function daily, which authenticates with the Spotify API and downloads the latest Top 100 Global tracks, artists, and albums. The raw data is stored in S3 with timestamped folders for versioning.
 
 ### 2. **Schema Discovery (Glue Crawler)**
 Glue Crawlers scan the S3 bucket, infer the schema, and update the Glue Data Catalog, making the data queryable and discoverable.
@@ -114,8 +114,8 @@ To get this project up and running, follow these steps:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/dhirengshetty14/awscloud-data-etl-spotify50.git](https://github.com/dhirengshetty14/awscloud-data-etl-spotify50.git)
-    cd awscloud-data-etl-spotify50
+    git clone [https://github.com/dhirengshetty14/awscloud-data-etl-spotify100.git](https://github.com/dhirengshetty14/awscloud-data-etl-spotify100.git)
+    cd awscloud-data-etl-spotify100
     ```
 
 2.  **Set up Python Environment:**
