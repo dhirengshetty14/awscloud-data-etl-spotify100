@@ -1,4 +1,4 @@
-# 🎵 **Global Beats: A Cloud-Native Spotify Data Engineering Pipeline**
+# 🎵 **Global Beats 100: A Cloud-Native Spotify Data Engineering Pipeline**
 
 ## 🚀 Overview
 
